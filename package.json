@@ -1,9 +1,9 @@
 {
-  "name": "<%= name %>",
+  "name": "electron-vue-template",
   "version": "0.0.1",
   "private": true,
-  "description": "<%= description %>",
-  "author": "<%= author %>",
+  "description": "electron-vue2-template 默认模板",
+  "author": "NiRongxu",
   "main": "./src/main/dist/index.js",
   "scripts": {
     "dev": "concurrently -n=vite,electron -c=green,blue \"npm run dev:vite\" \"npm run dev:electron\"",
@@ -58,6 +58,7 @@
     "electron-is-dev": "^2.0.0",
     "electron-log": "^4.3.5",
     "electron-updater": "^4.3.9",
+    "figlet": "^1.5.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

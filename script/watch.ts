@@ -46,27 +46,18 @@ tryUsePort(PORT, function (port: unknown) {
     process.env.PORT = <string>port
 }).then(() => {
     if (process.env.PORT !== '3000') console.log(chalk.green(`端口：${process.env.PORT} 可连接,尝试连接...`));
-    // 解析 npm script 的命令行参数
     const argv = minimist(process.argv.slice(2))
-// 加载 rollup 配置
     const opts = options(argv.env)
 
-    // Vite 启动后以监听模式开启 Rollup 编译 Electron 主进程代码
     const watcher = watch(opts)
 
     let child: ChildProcess
 
     watcher.on('event', ev => {
         if (ev.code === 'END') {
-            // 保证只启动一个 Electron 个程序
             if (child) child.kill()
-
-            // 使用 NodeJs 子进程能力拉起 Electron 程序
             child = spawn(
-                // 这里 electron 本质上只是一个字符串；指向 Electron 可执行程序的绝对路径
                 electron as any,
-
-                // 指定 Electron 主进程入口文件；既 Rollup 编译后输出文件的路径
                 [join(__dirname, `../${main}`)], { stdio: 'inherit' }
             )
         }

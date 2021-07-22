@@ -9,14 +9,15 @@ import {startLog} from "../../script/utils";
 const {app, BrowserWindow, session} = require('electron');
 const isDev = require('electron-is-dev');
 const path = require('path');
-// process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
+process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
 function createWindow () {
     const win = new BrowserWindow({
         width: 800,
         height: 600,
         webPreferences: {
             preload: path.join(__dirname, '../../preload/index.js')
-        }
+        },
+        show: false // 先隐藏
     })
 
     const URL = isDev
@@ -27,7 +28,11 @@ function createWindow () {
         console.log(chalk.green(startLog))
     })
 
+    console.log('isDev',isDev);
     if (isDev) win.webContents.openDevTools({mode:'bottom'});
+    win.on('ready-to-show', function () {
+        win.show()
+    })
 }
 app.whenReady().then(() => {
     createWindow()
