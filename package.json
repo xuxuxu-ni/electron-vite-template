@@ -6,11 +6,11 @@
   "author": "<%= author %>",
   "main": "./src/main/dist/index.js",
   "scripts": {
-    "dev": "concurrently -n=vite,electron,vue-tools -c=green,blue,purple \"npm run dev:vite\" \"npm run dev:electron\"",
+    "dev": "concurrently -n=vite,electron -c=green,blue \"npm run dev:vite\" \"npm run dev:electron\"",
     "dev:vite": "vite",
     "dev:tools": "./node_modules/.bin/vue-devtools",
     "dev:electron": "node -r ts-node/register script/watch --env=development --watch",
-    "build": "concurrently -n=vite,electron -c=green,blue \"npm run build:vite\" \"npm run build:electron\" \"npm run build:electron-win32\"",
+    "build": "concurrently -n=vite,electron -c=green,blue \"npm run build:vite\" \"npm run build:electron\"",
     "build:vite": "vite build",
     "build:electron": "electron-builder",
     "build:electron-win32": "electron-builder --windows nsis:ia32",
