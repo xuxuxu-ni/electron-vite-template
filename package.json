@@ -1,7 +1,9 @@
 {
-  "name": "electron-vue-template",
-  "version": "0.1.0",
+  "name": "<%= name %>",
+  "version": "0.0.1",
   "private": true,
+  "description": "<%= description %>",
+  "author": "<%= author %>",
   "main": "./src/main/dist/index.js",
   "scripts": {
     "dev": "concurrently -n=vite,electron,vue-tools -c=green,blue,purple \"npm run dev:vite\" \"npm run dev:electron\"",
@@ -36,12 +38,6 @@
       "createStartMenuShortcut": true,
       "shortcutName": "electron-vue-template"
     },
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "http://xxxxx/"
-      }
-    ],
     "win": {
       "icon": "public/icon.ico",
       "target": [
