@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "description": "electron-vue2-template 默认模板",
-  "author": "NiRongxu",
+  "author": {
+    "name": "NiRongxu",
+    "email": "595485548@qq.com",
+    "url": "https://github.com/owner/project/issues"
+  },
   "main": "./src/main/dist/index.js",
   "scripts": {
     "dev": "concurrently -n=vite,electron -c=green,blue \"npm run dev:vite\" \"npm run dev:electron\"",
@@ -47,12 +51,43 @@
       ]
     },
     "mac": {
-      "icon": "public/icon.ico"
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.medical"
+    },
+    "dmg": {
+      "background": "public/background.png",
+      "icon": "public/icon.ico",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 180,
+          "type": "file"
+        }
+      ]
     },
     "linux": {
-      "icon": "public/icon.ico"
-    }
+      "icon": "public/256x256.png",
+      "target": "deb"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://minio.shennong.sn:9000/shennong/client/",
+        "channel": "latest"
+      }
+    ]
   },
+  "homepage": "http://192.168.6.13:8081/repository/group-npm/",
   "dependencies": {
     "core-js": "^3.6.5",
     "electron-is-dev": "^2.0.0",
