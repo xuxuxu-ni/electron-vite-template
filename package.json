@@ -6,7 +6,7 @@
   "author": {
     "name": "NiRongxu",
     "email": "595485548@qq.com",
-    "url": "https://github.com/owner/project/issues"
+    "url": "http://192.168.5.122/zovan-cli-template/electron-vue-template/issues"
   },
   "main": "./src/main/dist/index.js",
   "scripts": {
