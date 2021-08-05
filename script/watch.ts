@@ -46,13 +46,8 @@ tryUsePort(PORT, function (port: unknown) {
     process.env.PORT = <string>port
 }).then(() => {
     if (process.env.PORT !== '3000') console.log(chalk.green(`端口：${process.env.PORT} 可连接,尝试连接...`));
-    const argv = minimist(process.argv.slice(2))
-    const opts = options(argv.env)
-
-    const watcher = watch(opts)
-
+    const watcher = watch(options)
     let child: ChildProcess
-
     watcher.on('event', ev => {
         if (ev.code === 'END') {
             if (child) child.kill()

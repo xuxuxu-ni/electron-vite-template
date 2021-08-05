@@ -14,7 +14,7 @@
     "dev:vite": "vite",
     "dev:tools": "./node_modules/.bin/vue-devtools",
     "dev:electron": "node -r ts-node/register script/watch --env=development --watch",
-    "build": "concurrently -n=vite,electron -c=green,blue \"npm run build:vite\" \"npm run build:electron\"",
+    "build": "npm run build:vite && npm run build:electron",
     "build:vite": "vite build",
     "build:electron": "electron-builder",
     "build:electron-win32": "electron-builder --windows nsis:ia32",
@@ -28,6 +28,12 @@
     "productName": "electron-vue-template",
     "appId": "electron-vue-template.zovan",
     "copyright": "©2021 中元健康",
+    "asar": false,
+    "files": [
+      "src/**/dist/**",
+      "src/main/autoUpdater.js",
+      "src/preload/**"
+    ],
     "directories": {
       "output": "build"
     },
@@ -35,15 +41,15 @@
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "public/icon.ico",
-      "uninstallerIcon": "public/icon.ico",
-      "installerHeaderIcon": "public/icon.ico",
+      "installerIcon": "static/icon.ico",
+      "uninstallerIcon": "static/icon.ico",
+      "installerHeaderIcon": "static/icon.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "electron-vue-template"
     },
     "win": {
-      "icon": "public/icon.ico",
+      "icon": "static/icon.ico",
       "target": [
         {
           "target": "nsis"
@@ -58,8 +64,8 @@
       "category": "public.app-category.medical"
     },
     "dmg": {
-      "background": "public/background.png",
-      "icon": "public/icon.ico",
+      "background": "static/background.png",
+      "icon": "static/icon.ico",
       "iconSize": 100,
       "contents": [
         {
@@ -76,7 +82,7 @@
       ]
     },
     "linux": {
-      "icon": "public/256x256.png",
+      "icon": "static/256x256.png",
       "target": "deb"
     },
     "publish": [

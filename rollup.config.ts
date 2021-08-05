@@ -12,8 +12,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import typescript from '@rollup/plugin-typescript'
 import json from '@rollup/plugin-json'
 
-export default (env = 'production') => {
-    const options: RollupOptions = {
+const options:RollupOptions = {
         input: join(__dirname, './src/main/index.ts'),
         output: {
             file: join(__dirname, './src/main/dist/index.js'),
@@ -27,7 +26,5 @@ export default (env = 'production') => {
                 module: 'ESNext', // 支持 typescript
             }),
         ]
-    }
-
-    return options
 }
+export default options

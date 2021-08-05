@@ -10,8 +10,7 @@ module.exports = {
  checkUpdate: function (){
 
     if(process.platform == 'darwin'){
-        //所以访问http://127.0.0.1:9005/darwin，就相当于访问了static/darwin文件夹，win32同理
-        autoUpdater.setFeedURL('http://minio.shennong.sn:9000/minio/shennong/client/')  //设置要检测更新的路径
+        autoUpdater.setFeedURL('http://minio.shennong.sn:9000/minio/shennong/client/')
     }else{
         autoUpdater.setFeedURL('http://minio.shennong.sn:9000/shennong/client/')
     }
