@@ -19,7 +19,7 @@ function createWindow () {
         webPreferences: {
             preload: path.join(__dirname, '../../preload/index.js')
         },
-        // show: false // 先隐藏
+        show: false // 先隐藏
     })
 
 
@@ -33,9 +33,9 @@ function createWindow () {
     })
 
     if (isDev) win.webContents.openDevTools({mode:'bottom'});
-    // win.on('ready-to-show', function () {
-    //     win.show()
-    // })
+    win.on('ready-to-show', function () {
+        win.show()
+    })
 }
 app.whenReady().then(() => {
     createWindow()
