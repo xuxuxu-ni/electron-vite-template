@@ -12,6 +12,11 @@ module.exports = {
     'type-enum': [2, 'always', [
       'wip', 'feat', 'fix', 'refactor', 'docs', 'test', 'chore', 'style', 'revert'
     ]],
-    'subject-empty': [2, 'never']
+    'scope-enum': [0, 'always', [
+      'src/render/view', '公共组件', '模块一', '模块二'
+    ]],
+    'subject-empty': [2, 'never'],
+    'scope-empty': [0],
+    'scope-case': [0],
   }
 }
