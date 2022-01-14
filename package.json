@@ -1,6 +1,6 @@
 {
   "name": "electron-vue-template",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "private": true,
   "description": "electron-vue2-template 默认模板",
   "author": {
@@ -15,6 +15,9 @@
     "dev:tools": "./node_modules/.bin/vue-devtools",
     "dev:electron": "node -r ts-node/register script/watch --env=development --watch",
     "build": "npm run build:vite && npm run build:main && npm run build:electron",
+    "build:win32": "npm run build:vite && npm run build:main && npm run build:electron-win32",
+    "build:mac": "npm run build:vite && npm run build:main && npm run build:electron:mac",
+    "build:linux": "npm run build:vite && npm run build:main && npm run build:electron:linux",
     "build:vite": "vite build",
     "build:electron": "electron-builder",
     "build:main": "node -r ts-node/register script/watch",
