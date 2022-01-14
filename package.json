@@ -117,9 +117,12 @@
     "electron-log": "^4.3.5",
     "electron-updater": "^4.3.9",
     "figlet": "^1.5.0",
+    "lodash": "^4.17.21",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "ffi-napi": "^2.5.0",
+    "iconv-lite": "^0.6.3"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
