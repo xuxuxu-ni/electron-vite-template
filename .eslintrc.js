@@ -20,14 +20,14 @@ module.exports = {
     'no-spaced-func': 2, //函数调用时 函数名与()之间不能有空格
     'no-func-assign': 2, // 禁止重复的函数声明
     'newline-after-var': 2,//变量声明后是否需要空一行
-    'no-undef': 1, //不能有未定义的变量
+    'no-undef': 2, //不能有未定义的变量
     'key-spacing': [2, {'beforeColon': false, 'afterColon': true}], //对象字面量中冒号的前后空格
     'no-redeclare': 2,//禁止重复声明变量
     'eqeqeq': [2, 'allow-null'], // 使用 === 替代 ==
     'quotes': [1, 'single', 'avoid-escape'], // 单引号
     'semi': [2, 'never'], // 不使用分号
     'comma-dangle': [2, 'never'], // 对象字面量项尾不能有逗号
-    'no-unused-vars': 1, // 不能有声明后未被使用的变量或参数
+    'no-unused-vars': 2, // 不能有声明后未被使用的变量或参数
     'no-dupe-keys': 2,//在创建对象字面量时不允许键重复 {a:1,a:1}
     'no-invalid-this': 2,//禁止无效的this，只能用在构造器，类，对象字面量
     'no-var': 2,//禁用var，用let和const代替

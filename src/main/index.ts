@@ -12,6 +12,16 @@ const path = require('path')
 // const {URL} = require('url');
 const {checkUpdate} = require('../autoUpdater')
 
+// electron > 12 以后使用remote
+require('@electron/remote/main').initialize()
+// 渲染进程使用 remote 示例
+// const { BrowserWindow } = require('@electron/remote/main')
+
+const newUrl = path.join(process.cwd(),'/resources')
+const staticPath = isDev ? path.join(path.resolve('./'), '/static').replace(/\\/g, '\\\\'):newUrl // 根据当前代码的js相对static文件夹路径
+
+console.log(staticPath)
+
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
 function createWindow () {
   const win = new BrowserWindow({
@@ -21,9 +31,11 @@ function createWindow () {
       preload: path.join(__dirname, '../../preload/index.js'),
       nodeIntegration: true,
       webviewTag: true,
-      contextIsolation: false
+      contextIsolation: false,
+      webSecurity: false,
+      enableRemoteModule: true
     },
-    show: false // 先隐藏
+    show: isDev
   })
 
 
