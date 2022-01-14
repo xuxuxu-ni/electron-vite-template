@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](http://192.168.5.122/zovan-cli-template/electron-vue-template/compare/v1.0.1...v1.1.0) (2022-01-14)
+
+
+### Features
+
+* **基础框架:** 适配electron>12 使用 remote 模块,可以根据不同的医院起不同的项目打不同的包,增加readme文件 ([cac7a3b](http://192.168.5.122/zovan-cli-template/electron-vue-template/commit/cac7a3ba9f7440189e011ee0ef45f2f41f8cd684))
+* 优化多端打包命令 ([7896866](http://192.168.5.122/zovan-cli-template/electron-vue-template/commit/7896866049443ae3667fed99c0cc75533c84db7e))
+
 ### [1.0.1](http://192.168.5.122/zovan-cli-template/electron-vue-template/compare/v1.0.0...v1.0.1) (2021-08-17)
 
 
