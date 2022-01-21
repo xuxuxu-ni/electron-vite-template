@@ -23,8 +23,12 @@ const staticPath = isDev ? path.join(path.resolve('./'), '/static').replace(/\\/
 console.log(staticPath)
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
+
+// eslint-disable-next-line no-undef
+let win: Electron.CrossProcessExports.BrowserWindow | null = null
+
 function createWindow () {
-  const win = new BrowserWindow({
+  win = new BrowserWindow({
     width: 1200,
     height: 800,
     webPreferences: {
