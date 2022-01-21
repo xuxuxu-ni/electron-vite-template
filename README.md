@@ -12,6 +12,10 @@ yarn dev
 ```
 yarn build
 ```
+### 打包win 32位
+```
+yarn build:win32
+```
 ### 打包mac
 ```
 yarn build:mac
