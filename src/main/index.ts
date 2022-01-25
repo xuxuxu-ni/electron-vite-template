@@ -31,6 +31,7 @@ function createWindow () {
   win = new BrowserWindow({
     width: 1200,
     height: 800,
+    icon: staticPath  + '/icons/icon.ico',
     webPreferences: {
       preload: path.join(__dirname, '../../preload/index.js'),
       nodeIntegration: true,
@@ -40,7 +41,9 @@ function createWindow () {
     },
     show: isDev
   })
-
+  if (process.platform === 'darwin') {
+    app.dock.setIcon(staticPath + '/icons/icon.png')
+  }
 
   const pageUrl = isDev
     ? `http://localhost:${process.env.PORT}`: `file://${path.join(__dirname, '../../render/dist/index.html')}`
@@ -53,6 +56,7 @@ function createWindow () {
 
   if (isDev) win.webContents.openDevTools({mode: 'bottom'})
   win.on('ready-to-show', function () {
+    // @ts-ignore
     win.show()
   })
 }
