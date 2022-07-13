@@ -47,15 +47,15 @@
       "oneClick": false,
       "allowElevation": true,
       "allowToChangeInstallationDirectory": true,
-      "installerIcon": "static/icons/icon.ico",
-      "uninstallerIcon": "static/icons/icon.ico",
-      "installerHeaderIcon": "static/icons/icon.ico",
+      "installerIcon": "public/icons/icon.ico",
+      "uninstallerIcon": "public/icons/icon.ico",
+      "installerHeaderIcon": "public/icons/icon.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "electron-vue-template"
     },
     "win": {
-      "icon": "static/icons/icon.ico",
+      "icon": "public/icons/icon.ico",
       "target": [
         {
           "target": "nsis"
@@ -67,11 +67,11 @@
         "dmg",
         "zip"
       ],
-      "icon": "static/icns/icon.icns",
+      "icon": "public/icns/icon.icns",
       "category": "public.app-category.medical"
     },
     "dmg": {
-      "background": "static/icns/background.png",
+      "background": "public/icns/background.png",
       "iconSize": 100,
       "contents": [
         {
@@ -88,7 +88,7 @@
       ]
     },
     "linux": {
-      "icon": "static/icons/icon.png",
+      "icon": "public/icns/icon.icns",
       "target": "deb"
     },
     "publish": [

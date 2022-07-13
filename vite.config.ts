@@ -35,6 +35,7 @@ export default defineConfig( {
     ],
     resolve: {
         alias: [
+            { find: /^~/, replacement: '' },
             {
                 find: '@',
                 replacement: path.resolve(__dirname, 'src/render'),

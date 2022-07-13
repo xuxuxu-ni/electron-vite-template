@@ -4,7 +4,6 @@
  * Date: 2021/7/11
  * Description: 文件描述
  */
-import { builtinModules } from 'module'
 import { join } from 'path'
 import { RollupOptions } from 'rollup'
 import nodeResolve from '@rollup/plugin-node-resolve'
