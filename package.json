@@ -71,7 +71,6 @@
       "category": "public.app-category.medical"
     },
     "dmg": {
-      "background": "public/icns/background.png",
       "iconSize": 100,
       "contents": [
         {
@@ -94,7 +93,7 @@
     "publish": [
       {
         "provider": "generic",
-        "url": "http://minio.shennong.sn:9000/shennong/client/",
+        "url": "http://minio.xxxx.sn:9000/xxxx/client/",
         "channel": "latest"
       }
     ]
