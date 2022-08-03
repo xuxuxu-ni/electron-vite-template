@@ -18,9 +18,9 @@ require('@electron/remote/main').initialize()
 // const { BrowserWindow } = require('@electron/remote/main')
 
 const newUrl = path.join(process.cwd(),'/resources')
-const staticPath = isDev ? path.join(path.resolve('./'), '/static').replace(/\\/g, '\\\\'):newUrl // 根据当前代码的js相对static文件夹路径
+const publicPath = isDev ? path.join(path.resolve('./'), '/public').replace(/\\/g, '\\\\'):newUrl // 根据当前代码的js相对static文件夹路径
 
-console.log(staticPath)
+console.log(publicPath)
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
 
@@ -31,7 +31,7 @@ function createWindow () {
   win = new BrowserWindow({
     width: 1200,
     height: 800,
-    icon: staticPath  + '/icons/icon.ico',
+    icon: publicPath  + '/icons/icon.ico',
     webPreferences: {
       preload: path.join(__dirname, '../../preload/index.js'),
       nodeIntegration: true,
@@ -42,7 +42,7 @@ function createWindow () {
     show: isDev
   })
   if (process.platform === 'darwin') {
-    app.dock.setIcon(staticPath + '/icons/icon.png')
+    app.dock.setIcon(publicPath + '/icons/icon.png')
   }
 
   const pageUrl = isDev
@@ -67,7 +67,7 @@ app.whenReady().then(() => {
       createWindow()
     }
   })
-  if (isDev) session.defaultSession.loadExtension(path.resolve('./static/devTool')).then(() =>{})
+  if (isDev) session.defaultSession.loadExtension(path.resolve('./public/devTool')).then(() =>{})
 })
 app.on('ready', () => {
   if (!isDev) checkUpdate()

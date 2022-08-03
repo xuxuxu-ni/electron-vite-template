@@ -12,7 +12,7 @@ export default {
   data() {
     return {
       projectName: 'electron-vue-template',
-      name: '禄丰医院'
+      name: '项目一'
     }
   }
 }

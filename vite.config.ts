@@ -13,37 +13,38 @@ import pag from './package.json'
 dotenv.config({ path: join(__dirname, '.env') })
 
 export const PORT = process.env.PORT
+
 export default defineConfig( {
-    base: './',
-    build:{
-        outDir: './src/render/dist'
-    },
-    server: {
-        port: Number(process.env.PORT),
-    },
-    plugins: [
-        createVuePlugin({
-            jsx: true,
-        }),
-        minifyHtml(),
-        injectHtml({
-            injectData: {
-                title: pag.name,
-                injectScript: '<script src="/src/render/main.js"></script>',
-            },
-        }),
-    ],
-    resolve: {
-        alias: [
-            { find: /^~/, replacement: '' },
-            {
-                find: '@',
-                replacement: path.resolve(__dirname, 'src/render'),
-            },
-        ],
-    },
-    esbuild: {
-        jsxFactory: 'h',
-        jsxFragment: 'Fragment',
-    }
+  base: './',
+  build: {
+    outDir: './src/render/dist'
+  },
+  server: {
+    port: Number(process.env.PORT)
+  },
+  plugins: [
+    createVuePlugin({
+      jsx: true
+    }),
+    minifyHtml(),
+    injectHtml({
+      injectData: {
+        title: pag.name,
+        injectScript: '<script src="/src/render/main.js"></script>'
+      }
+    })
+  ],
+  resolve: {
+    alias: [
+      { find: /^~/, replacement: '' },
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src/render')
+      }
+    ]
+  },
+  esbuild: {
+    jsxFactory: 'h',
+    jsxFragment: 'Fragment'
+  }
 })

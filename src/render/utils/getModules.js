@@ -11,16 +11,16 @@ const letterToLowerCase = (name) => `${name[0].toLowerCase()}${name.slice(1)}`
 const letterToUpperCase = (name) => `${name[0].toUpperCase()}${name.slice(1)}`
 
 function getComponentsGlob() {
-  return import.meta.glob('../components/*.vue')
+  return import.meta.glob('../components/项目一/*.vue')
 }
 function getComponentsGlobEager() {
-  return import.meta.globEager('../components/*.vue')
+  return import.meta.globEager('../components/项目一/*.vue')
 }
 function getModulesGlob() {
-  return import.meta.glob('../views/lufeng/*.vue')
+  return import.meta.glob('../views/项目一/*.vue')
 }
 function getModulesGlobEager() {
-  return import.meta.globEager('../views/lufeng/*.vue')
+  return import.meta.globEager('../views/项目一/*.vue')
 }
 // 自动注册组件
 export const asyncComponent = function (app) {

@@ -11,8 +11,8 @@ export default {
   isRouter: true,
   data() {
     return {
-      projectName: 'electron-vue-template',
-      name: '德安医院'
+      projectName: 'electron-vite-template',
+      name: '项目二'
     }
   }
 }
