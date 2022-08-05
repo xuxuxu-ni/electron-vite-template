@@ -20,7 +20,6 @@ require('@electron/remote/main').initialize()
 const newUrl = path.join(process.cwd(),'/resources')
 const publicPath = isDev ? path.join(path.resolve('./'), '/public').replace(/\\/g, '\\\\'):newUrl // 根据当前代码的js相对static文件夹路径
 
-console.log(publicPath)
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = String(true)
 

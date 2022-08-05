@@ -6,7 +6,7 @@
  */
 const figlet = require('figlet');
 let startLog = ''
-figlet.text('zovan-electron', {
+figlet.text('electron-vite', {
     font: 'Big Money-nw',
     horizontalLayout: 'default',
     verticalLayout: 'default',

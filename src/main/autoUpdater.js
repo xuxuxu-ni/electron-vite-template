@@ -11,9 +11,9 @@ module.exports = {
   checkUpdate: function (){
 
     if(process.platform === 'darwin'){
-      autoUpdater.setFeedURL('http://minio.shennong.sn:9000/minio/shennong/client/')
+      autoUpdater.setFeedURL('http://minio.xxx.sn:9000/minio/xxx/client/')
     }else{
-      autoUpdater.setFeedURL('http://minio.shennong.sn:9000/shennong/client/')
+      autoUpdater.setFeedURL('http://minio.xxx.sn:9000/xxx/client/')
     }
     autoUpdater.channel='latest'
     //检测更新
