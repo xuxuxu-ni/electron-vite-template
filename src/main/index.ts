@@ -15,7 +15,7 @@ const {checkUpdate} = require('../autoUpdater')
 // electron > 12 以后使用remote
 require('@electron/remote/main').initialize()
 // 渲染进程使用 remote 示例
-// const { BrowserWindow } = require('@electron/remote/main')
+// const { BrowserWindow } = require('@electron/remote')
 
 const newUrl = path.join(process.cwd(),'/resources')
 const publicPath = isDev ? path.join(path.resolve('./'), '/public').replace(/\\/g, '\\\\'):newUrl // 根据当前代码的js相对static文件夹路径

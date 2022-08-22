@@ -1,6 +1,29 @@
 #  electron-vite-template
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-%3E%3D%206.0.0-blue.svg" />
+  <img src="https://img.shields.io/badge/npm-%3E%3D%203.0.0-blue.svg" />
+  <a href="https://github.com/xuxuxu-ni/vue-xuAdmin/blob/master/README.md">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/xuxuxu-ni/vue-xuAdmin/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" target="_blank" />
+  </a>
+</p>
+
 electron-vite-template 主进程使用rollup,渲染进程使用 vite 编译的一个electron项目模板,适用于 vue, react 等任何框架.
 可以打包成window, liunx, macOS 等系统的安装包,减少项目初期构建工作, 提高工作效率。
+
+### 🏠 [Homepage](https://xuxuxu-ni.github.io/vue-xuAdmin/dist/)
+## Author
+
+👤 **xuxuxu-ni**
+
+* Github: [@xuxuxu-ni](https://github.com/xuxuxu-ni)
+* QQ: 595485548
+* QQ群: 157216616
+* email: 595485548@qq.com
+
 ## 命令说明
 
 ### 启动项目
